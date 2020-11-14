@@ -15,7 +15,9 @@ function render(data){
         `);
     }).join(' ');
 
-    document.getElementById('messages').innerHTML = html;
+    var div_msgs = document.getElementById('messages');
+    div_msgs.innerHTML = html;
+    div_msgs.scrollTop = div_msgs.scrollHeight;
 }
 
 function addMessage(e){
